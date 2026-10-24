@@ -46,4 +46,10 @@ The bundle's recorded main head is `982b135540d4d3d6750bf509c775a24918e5c17a`; i
 
 The user supplied the public repository `https://github.com/fatal34/mma3001-plate-cooling`, and the authenticated connection verified administration/push permission. The terminal Git client lacked publication credentials. Publication therefore uses the connected GitHub API and creates **new current AI-attributed publication commits**, separately from the bundled local development graph.
 
-Final hosted commit/content checks and final zipped-clone/checksum are **pending the final publication/packaging update** in `docs/submission_status.md`. Do not infer those outcomes from this clean local reproduction record. Moodle upload, booking, attendance and student personal understanding remain external responsibilities.
+## Hosted publication and clone packaging
+
+The public `main` branch was published at **`8079411f74ac57b2e1f229ede7cea3762b7f24c5`** and cloned afresh over HTTPS. All **79 published tracked files** matched the prepared local files byte-for-byte. All **21 code, configuration and dependency files** matched the clean clone that completed the full reproduction workflow. The GitHub connection also fetched the published README successfully. Publication preserved the user's initial repository commit as its parent.
+
+`scripts/package_submission.py` ran successfully from the published clone. It created a further clean clone, checked the required artifacts, verified ZIP integrity and confirmed that `.git/HEAD` was included. The original development bundle was retained. The final handoff archive is rebuilt from hosted `main` after the verification-documentation update; the exact final release commit, SHA-256 and size are recorded in the separately delivered `dist/submission_manifest.json`. Keeping the manifest outside its own archive avoids a circular checksum. The final documentation update does not change the tested numerical implementation or saved results.
+
+Moodle upload, booking, attendance and student personal understanding remain external responsibilities.
