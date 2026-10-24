@@ -1,0 +1,28 @@
+         18077 function calls in 0.038 seconds
+
+   Ordered by: cumulative time
+   List reduced from 65 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.034    0.034    0.038    0.038 solvers.py:70(solve)
+      642    0.000    0.000    0.001    0.000 fromnumeric.py:2589(all)
+      641    0.000    0.000    0.001    0.000 fromnumeric.py:3052(max)
+     1285    0.001    0.000    0.001    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+      644    0.000    0.000    0.001    0.000 fromnumeric.py:89(_wrapreduction_any_all)
+      641    0.000    0.000    0.001    0.000 fromnumeric.py:69(_wrapreduction)
+      640    0.000    0.000    0.000    0.000 _ufunc_config.py:448(__enter__)
+      640    0.000    0.000    0.000    0.000 getlimits.py:494(__new__)
+      640    0.000    0.000    0.000    0.000 _ufunc_config.py:464(__exit__)
+      641    0.000    0.000    0.000    0.000 {method 'copy' of 'numpy.ndarray' objects}
+     1280    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+     1280    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+     1285    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+     1280    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+      640    0.000    0.000    0.000    0.000 {built-in method numpy._core._multiarray_umath._make_extobj}
+      640    0.000    0.000    0.000    0.000 {method 'reset' of '_contextvars.ContextVar' objects}
+     1284    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+     1280    0.000    0.000    0.000    0.000 {built-in method builtins.abs}
+      640    0.000    0.000    0.000    0.000 {method 'set' of '_contextvars.ContextVar' objects}
+      640    0.000    0.000    0.000    0.000 _ufunc_config.py:438(__init__)
+
+

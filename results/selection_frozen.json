@@ -1,0 +1,29 @@
+{
+  "selected": {
+    "method": "ftcs",
+    "intervals": 20,
+    "requested_r": 0.4,
+    "dt_s": 0.01,
+    "rmse_c": 0.24805518959441414,
+    "max_abs_error_c": 0.9939977613150361,
+    "threshold_time_s": 1.6425371932452744,
+    "threshold_error_pct": 0.4139715149790558,
+    "steps": 300,
+    "actual_r": 0.4000000000000093,
+    "within_bounds": true,
+    "retained_array_bytes": 6032,
+    "median_runtime_s": 0.001790793749387376,
+    "min_runtime_s": 0.0017558270497829652,
+    "max_runtime_s": 0.0017925437496160157,
+    "timing_repeats": 3,
+    "timing_batch_size": 20,
+    "refinement_change_pct": 0.31074079717154646,
+    "eligible": true
+  },
+  "criteria": {
+    "max_temperature_error_c": 1.0,
+    "max_threshold_relative_error": 0.02,
+    "max_refinement_relative_change": 0.01,
+    "physical_bounds_tolerance_c": 1e-09
+  }
+}

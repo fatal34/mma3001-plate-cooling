@@ -1,0 +1,15 @@
+{
+  "benchmark_times_s": [0.1, 0.5, 1.0, 2.0, 3.0],
+  "selection": {
+    "max_temperature_error_c": 1.0,
+    "max_threshold_relative_error": 0.02,
+    "max_refinement_relative_change": 0.01,
+    "physical_bounds_tolerance_c": 1e-9
+  },
+  "candidate_intervals": [20, 40, 80, 160],
+  "ftcs_diffusion_numbers": [0.1, 0.25, 0.4],
+  "backward_euler_diffusion_numbers": [0.4, 1.0, 4.0, 16.0, 64.0],
+  "timing_repeats": 3,
+  "confirmation": {"length_m": 0.013, "diffusivity_m2_s": 0.000007, "initial_temp_c": 120.0, "boundary_temp_c": 25.0, "target_temp_c": 50.0},
+  "sensitivity_multipliers": [0.5, 1.0, 2.0]
+}

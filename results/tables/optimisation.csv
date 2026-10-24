@@ -1,0 +1,3 @@
+implementation,median_runtime_s,min_runtime_s,max_runtime_s,timing_repeats,timing_batch_size,steps,intervals,output_max_difference_c
+loop,0.03422495900304057,0.03338916599750519,0.03612758399685845,5,1,640,160,0.0
+vectorized,0.00424969159939792,0.004141112498473376,0.004659820900997147,5,10,640,160,0.0

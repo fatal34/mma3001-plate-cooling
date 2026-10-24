@@ -1,0 +1,187 @@
+................................................................         [100%]
+- Generated html report: file:///Users/lachlanelliott/Documents/ChatGPT/mma3001%20project/tmp/clean_copy_final/reports/test_report.html -
+64 passed in 9.03s
+E1/E2: analytical checks and baseline
+E3: separate spatial and temporal refinement
+E5: candidate accuracy and comparable solver timings
+  ftcs           N= 20 dt=0.0025 error=0.2795 C eligible=True
+  ftcs           N= 20 dt=0.00625 error=0.589 C eligible=True
+  ftcs           N= 20 dt=0.01 error=0.994 C eligible=True
+  ftcs           N= 40 dt=0.000625 error=0.06935 C eligible=True
+  ftcs           N= 40 dt=0.0015625 error=0.1543 C eligible=True
+  ftcs           N= 40 dt=0.0025 error=0.2536 C eligible=True
+  ftcs           N= 80 dt=0.00015625 error=0.01731 C eligible=True
+  ftcs           N= 80 dt=0.000390625 error=0.03862 C eligible=True
+  ftcs           N= 80 dt=0.000625 error=0.06397 C eligible=True
+  ftcs           N=160 dt=3.90625e-05 error=0.004325 C eligible=True
+  ftcs           N=160 dt=9.76563e-05 error=0.009659 C eligible=True
+  ftcs           N=160 dt=0.00015625 error=0.016 C eligible=True
+  backward_euler N= 20 dt=0.01 error=1.169 C eligible=False
+  backward_euler N= 20 dt=0.025 error=2.723 C eligible=False
+  backward_euler N= 20 dt=0.1 error=9.121 C eligible=False
+  backward_euler N= 40 dt=0.0025 error=0.2971 C eligible=True
+  backward_euler N= 40 dt=0.00625 error=0.7092 C eligible=True
+  backward_euler N= 40 dt=0.025 error=2.725 C eligible=False
+  backward_euler N= 40 dt=0.1 error=9.802 C eligible=False
+  backward_euler N= 80 dt=0.000625 error=0.07436 C eligible=True
+  backward_euler N= 80 dt=0.0015625 error=0.1774 C eligible=True
+  backward_euler N= 80 dt=0.00625 error=0.6938 C eligible=True
+  backward_euler N= 80 dt=0.025 error=2.729 C eligible=False
+  backward_euler N= 80 dt=0.1 error=9.857 C eligible=False
+  backward_euler N=160 dt=0.00015625 error=0.01859 C eligible=True
+  backward_euler N=160 dt=0.000390625 error=0.04435 C eligible=True
+  backward_euler N=160 dt=0.0015625 error=0.1733 C eligible=True
+  backward_euler N=160 dt=0.00625 error=0.6899 C eligible=True
+  backward_euler N=160 dt=0.025 error=2.736 C eligible=False
+E4: controlled unstable high-frequency mode
+E6: dimensionally consistent engineering sensitivity
+Implementation optimisation and profiling
+Final confirmation: frozen N and Fourier-number setting
+{
+  "selected": {
+    "method": "ftcs",
+    "intervals": 20,
+    "requested_r": 0.4,
+    "dt_s": 0.01,
+    "rmse_c": 0.24805518959441414,
+    "max_abs_error_c": 0.9939977613150361,
+    "threshold_time_s": 1.6425371932452744,
+    "threshold_error_pct": 0.4139715149790558,
+    "steps": 300,
+    "actual_r": 0.4000000000000093,
+    "within_bounds": true,
+    "retained_array_bytes": 6032,
+    "median_runtime_s": 0.0017871457996079699,
+    "min_runtime_s": 0.001762524999503512,
+    "max_runtime_s": 0.0017884624990983865,
+    "timing_repeats": 3,
+    "timing_batch_size": 20,
+    "refinement_change_pct": 0.31074079717154646,
+    "eligible": true
+  },
+  "confirmation": {
+    "plate": {
+      "length_m": 0.013,
+      "diffusivity_m2_s": 7e-06,
+      "initial_temp_c": 120.0,
+      "boundary_temp_c": 25.0,
+      "target_temp_c": 50.0
+    },
+    "settings": {
+      "intervals": 20,
+      "dt_s": 0.024142857142857143,
+      "end_time_s": 7.242857142857142,
+      "method": "ftcs",
+      "profile": "uniform",
+      "amplitude_c": 80.0,
+      "implementation": "vectorized",
+      "allow_unstable": false,
+      "perturbation_c": 0.0
+    },
+    "reference_time_s": 3.8565648946909192,
+    "rmse_c": 0.2945655376433714,
+    "max_abs_error_c": 1.1803723415616645,
+    "threshold_time_s": 3.840427804349708,
+    "threshold_error_pct": 0.4184317075391601,
+    "steps": 300,
+    "actual_r": 0.40000000000000535,
+    "within_bounds": true,
+    "retained_array_bytes": 6032,
+    "passed_temperature_and_crossing_targets": false,
+    "retuned_after_confirmation": false
+  },
+  "reference_time_s": 1.6493650949162348
+}
+{
+  "final_selected": {
+    "method": "ftcs",
+    "intervals": 20,
+    "requested_r": 0.25,
+    "dt_s": 0.00625,
+    "rmse_c": 0.1579125461536821,
+    "max_abs_error_c": 0.5889600321622765,
+    "threshold_time_s": 1.645588259786538,
+    "threshold_error_pct": 0.22898721097820632,
+    "steps": 480,
+    "actual_r": 0.2500000000000036,
+    "within_bounds": true,
+    "retained_array_bytes": 8912,
+    "median_runtime_s": 0.0028274444669174653,
+    "min_runtime_s": 0.0028001194004900753,
+    "max_runtime_s": 0.002830036133915807,
+    "timing_repeats": 3,
+    "timing_batch_size": 15,
+    "refinement_change_pct": 0.171800657873652,
+    "eligible": true,
+    "robust_eligible": true,
+    "selected_for_final": true
+  },
+  "reused_development": {
+    "plate": {
+      "length_m": 0.013,
+      "diffusivity_m2_s": 7e-06,
+      "initial_temp_c": 120.0,
+      "boundary_temp_c": 25.0,
+      "target_temp_c": 50.0
+    },
+    "settings": {
+      "intervals": 20,
+      "dt_s": 0.015089285714285715,
+      "end_time_s": 7.242857142857142,
+      "method": "ftcs",
+      "profile": "uniform",
+      "amplitude_c": 80.0,
+      "implementation": "vectorized",
+      "allow_unstable": false,
+      "perturbation_c": 0.0
+    },
+    "reference_time_s": 3.8565648946909192,
+    "rmse_c": 0.18752114855748178,
+    "max_abs_error_c": 0.6993900381927318,
+    "threshold_time_s": 3.847566659296444,
+    "threshold_error_pct": 0.23332254584545867,
+    "steps": 480,
+    "actual_r": 0.2500000000000144,
+    "within_bounds": true,
+    "retained_array_bytes": 8912,
+    "passed_temperature_and_crossing_targets": true
+  },
+  "final_confirmation": {
+    "plate": {
+      "length_m": 0.018,
+      "diffusivity_m2_s": 1.3e-05,
+      "initial_temp_c": 90.0,
+      "boundary_temp_c": 15.0,
+      "target_temp_c": 30.0
+    },
+    "settings": {
+      "intervals": 20,
+      "dt_s": 0.015576923076923078,
+      "end_time_s": 7.476923076923077,
+      "method": "ftcs",
+      "profile": "uniform",
+      "amplitude_c": 80.0,
+      "implementation": "vectorized",
+      "allow_unstable": false,
+      "perturbation_c": 0.0
+    },
+    "reference_time_s": 4.674216912813106,
+    "rmse_c": 0.14804301201907552,
+    "max_abs_error_c": 0.5521500301521343,
+    "threshold_time_s": 4.664225849770823,
+    "threshold_error_pct": 0.21374838242735145,
+    "steps": 480,
+    "actual_r": 0.2500000000000084,
+    "within_bounds": true,
+    "retained_array_bytes": 8912,
+    "passed_temperature_and_crossing_targets": true,
+    "retuned_after_confirmation": false,
+    "independence_limit": "Fresh mathematical check after an openly documented design revision, not empirical validation. Linear scaling makes temperature-span effects predictable."
+  }
+}
+Matplotlib is building the font cache; this may take a moment.
+Saved six PNG/PDF figure pairs to /Users/lachlanelliott/Documents/ChatGPT/mma3001 project/tmp/clean_copy_final/results/figures
+/Users/lachlanelliott/Documents/ChatGPT/mma3001 project/tmp/clean_copy_final/docs/html/index.html
+/Users/lachlanelliott/Documents/ChatGPT/mma3001 project/tmp/clean_copy_final/reports/MMA3001_technical_report.pdf: 9 main-content pages plus1references page
+Numerical reproduction agrees. Fresh timings are under tmp/reproduced_results; submitted evidence is preserved.
+Workflow complete. Saved report and slides describe the recorded run; review any changed timings before resubmission.

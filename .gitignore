@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.DS_Store
+tmp/
+output/
+dist/
+.codex-finalizer/
+.presentation-build/
+.chart-data-*/
+.mplconfig/
+.reproduction/
+reports/*.prof

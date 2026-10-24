@@ -1,0 +1,88 @@
+# Assessment traceability and completion audit
+
+Source: the user-supplied **MMA3001_2026_Project_Brief.pdf**, all 15 pages read in full; all four performance bands on rubric pages 10–15 were also checked visually. The existing AI project plan is supporting guidance, not an additional university requirement. No numerical weighting is supplied for the six rubric rows, so this audit does not invent mark allocations or predict a grade.
+
+**Completion semantics:** “Documented” means the cited text exists. “Generated” means a file was produced. “Checked locally” means the specific recorded inspection or numerical check was performed. These do not establish student understanding, final hosted publication or Moodle submission. The source, configurations, numerical evidence, report, full module API HTML, test report and presentation exist. A clean Git clone at `114615e` using a fresh pinned environment completed the full reproduction workflow with **exit code 0 and 64 checks passed, zero failures/errors/skips**. Its test-suite time was 9.031 s. The recorded selected configuration and analytical crossing reproduced exactly in the checked values, and submitted profiling evidence remained unchanged. The PDF contains **nine main-content pages plus one reference page**. Report, figures and presentation render reviews were performed. Details and limits are recorded in `docs/verification_record.md`.
+
+The user confirmed teaching-team approval of the topic and an extension until **midnight at the end of Sunday 25 October 2026, Australia/Melbourne**. These are user confirmations; no university system access or Moodle submission is implied.
+
+The user supplied `https://github.com/fatal34/mma3001-plate-cooling`. The authenticated connection confirmed administration/push permission and current public visibility. Final publication uses new current commits through the connected GitHub API and remains pending final verification. The actual local development history through `982b135` is preserved in `notes/development_history.bundle`, including `271decb` (model/solvers/tests), `e8eea09` (measured artifacts) and `114615e` (audit/reproduction preservation). Hosted publication commits and preserved development commits have distinct roles. AI attribution is explicit, and no backdating or historical student development is fabricated.
+
+## Complete required-deliverable checklist
+
+| ID | Requirement and source | Evidence/action | Status and final check |
+| --- | --- | --- | --- |
+| D01 | Engineering problem relevant to mechanical/aerospace engineering; numerical or ML method taught in unit (pp. 2, 7) | Plate-cooling study; `reports/MMA3001_technical_report.pdf`; `src/heat_project/` | Documented in report p. 1; FTCS/BE model and implementation on p. 2. Topic approved per user. |
+| D02 | Engineering context, problem, importance, intended use, justified limitations (p. 4) | Report introduction; `README.md`; `docs/engineering_derivation.md` | Report states the numerical configuration decision, conduction context, fixed-face scope and physical exclusions. Locally reviewed. |
+| D03 | Primary input formats, units, domains; outputs, meanings and intended use; invalid/missing/unsupported input handling (p. 4) | Report input/output table; `configs/`; README; public API docstrings and tests | Report p. 1 and README specify units/formats/shapes and JSON default/error rules. Saved tests cover scalar/option contracts. Mathematical solver permits heating/equilibrium; cooling study/reference root requires `Tb < target < Ti`. |
+| D04 | Function-level inputs and outputs (p. 4) | `src/heat_project/` docstrings; `docs/html/` | Generated HTML exists with all ten public API symbols; source and documented contracts checked locally. |
+| D05 | Functioning reproducible solution; how/why method works, assumptions, settings, implementation and limitations (p. 4) | README execution instructions; FTCS and BE source; derivation; report | Full fresh-environment reproduction from clean clone `114615e` completed with exit 0 and 64 passing checks. Recorded selected numerical values matched; see verification record. |
+| D06 | At least one credible alternative/baseline and evidence-based comparison (p. 5) | FTCS vs BE; loop vs vectorised FTCS; exact-reference checks; result tables/figures | Saved 29-candidate comparison, measured best qualifying methods and loop/vector timings. Report pp. 5–6 and 8 justify the actual choice. |
+| D07 | Justified validation design, metrics/criteria, results, effect on selection and limits (p. 5) | Exact sine and Fourier references; refinement; physics checks; tests; report | Reference convergence, independent centre root, refinement, bounds/symmetry and failure checks recorded. Initial failed check/revision/fresh confirmation preserved. No empirical validation claimed. |
+| D08 | Performance analysis and relevant improvement; profiling/timing; baseline vs selected solution (p. 6) | `results/tables/`; `results/figures/`; `reports/profile.txt`; report | Repeated timing ranges and zero loop/vector output difference recorded. Report p. 8 labels retained-array storage, scaling and an approximate 45,600-operation selected stencil count, excluding other overhead. |
+| D09 | Material AI disclosure/reflection (p. 6) | Report AI reflection; `notes/ai_use_log.md`; `notes/decisions.md` | Substantial AI authorship documented. Student personal verification, understanding and reflection remain unverified. |
+| D10 | Individual written report of 5–10 main pages, references/appendices excluded (p. 8) | `reports/MMA3001_technical_report.pdf` | Locally counted ten PDF pages: nine main pages plus one reference page. Rendered report review performed. The earlier 14-page plan is a separate planning artifact. |
+| D11 | Report covers problem, inputs/outputs/data, approach, validation/results, comparison/optimisation, limitations/lessons, AI reflection and references (p. 8) | Final report and editable source | All eight requested content areas present in the nine-page main report and references. No personal student-learning experience invented. |
+| D12 | GitHub repository maintained during development with accessible final link (pp. 2, 8) | User-supplied GitHub repository; `notes/development_history.bundle` | Actual local development history through `982b135` preserved in bundle. Hosted repository is public with authenticated admin/push permission; new AI-attributed publication commits are distinct. Final content/access verification remains pending. |
+| D13 | README (p. 8) | `README.md` | Purpose, result, environment, commands, contracts, provenance and limits documented. Full clean-clone reproduction completed. README distinguishes preserved development history from hosted publication history. |
+| D14 | HTML source-code documentation (p. 8) | `docs/html/index.html`, `docs/html/heat_project.html`, `docs/html/heat_project/` | Full generated pages for model, solvers, references and metrics now present, alongside package API containing all ten exports. Regenerated during clean reproduction. |
+| D15 | Licensing agreement (p. 8) | `LICENSE`; provenance notes | MIT licence present with explicit third-party/course-material exclusion and AI disclosure link. No university PDFs redistributed. |
+| D16 | Source code; functional main branch; inline comments and docstrings (p. 8) | `src/heat_project/`; actual `main` branch; development bundle | Source is commented/documented; 64 checks pass in a clean clone/fresh environment. Authentic local history is bundled. Final hosted branch/commit remains for publication verification. |
+| D17 | Test functions and test report (p. 8) | `tests/`; `reports/test_report.html`; `reports/test_results.xml` | Generated reports present. Saved XML records 64 tests, zero failures/errors/skips. Numerical/contract test meanings and targeted failure cases were reviewed. |
+| D18 | Submit written report via Moodle (p. 8) | Student upload and retained receipt | External action pending; artifact generation does not submit it. |
+| D19 | Submit accessible GitHub link (p. 8) | `https://github.com/fatal34/mma3001-plate-cooling` | User supplied URL; connector confirmed current public visibility and authenticated push access. Final files and Moodle link submission remain for final verification/student action. |
+| D20 | Submit ZIP of final repository clone via Moodle (p. 8) | Final clone archive; student upload/receipt | A local source ZIP is only a prepared package until it matches the actual hosted final repository and is uploaded. |
+| D21 | Book and attend individual five-minute presentation plus three-minute Q&A; Week 14/exam period (p. 9) | Booking confirmation; actual attendance | Pending student/external action; marks are not released until completed. |
+| D22 | Explain engineering problem and primary inputs/outputs; demonstrate GitHub/structure/docs; validation/tests; method choice; limitations/learning; AI use (p. 9) | `presentation/`; report; `notes/interview_questions.md` | Six-slide editable PPTX, PDF handout, timed notes/script and repository walkthrough prepared and visually reviewed. Preparation does not prove rehearsal or independent answers. |
+| D23 | AI cannot answer presentation/interview questions (p. 6) | Student's unaided explanation/practice | Cannot be verified by artifact generation. Use the learning guide before rehearsal. |
+
+The workshops additionally ask for slides, if used, at least 24 hours before the booked session. This is workshop guidance recorded in the supplied plan; check current booking/Moodle directions. The separate lifelong-learning competency hurdle in the workshops is not an extra nine-part project report and remains a separate student responsibility.
+
+## Full six-row rubric mapping
+
+### 1. Engineering problem, inputs and outputs (p. 10)
+
+**Excellent:** a precise, complete and professional engineering description; clear motivation and intended use; justified scope/limitations; all primary inputs and outputs with format, units, domains, meaning and use. **Good:** clear context and most I/O with minor omissions. **Satisfactory:** a basic description with vague motivation/use or missing units/domains/meaning. **Poor:** unclear/missing problem or incorrect/undefined I/O and context.
+
+Evidence locations: report engineering question and I/O table; README; `configs/`; `docs/data_provenance.md`; `docs/engineering_derivation.md`; source validation and tests. Final check: trace the configured numbers into actual functions, state full thickness convention, explain unsupported convective/phase-change cases and separate broad mathematical inputs from the narrower cooling study. Do not label synthetic `alpha` as an experimentally supported material property.
+
+### 2. GitHub repository structure, commits and README (p. 11)
+
+**Excellent:** logical, consistently named and fully reproducible repository, complete orientation/workflow/dependencies/data handling, and insightful commits and/or branching. **Good:** organised and mostly complete with minor workflow/dependency gaps and meaningful commits. **Satisfactory:** inconsistent partial structure and unclear README needing assistance. **Poor:** unusable README, absent dependencies/data, confusing structure, few/sporadic commits or irreproducible workflow.
+
+Evidence locations: root layout; README; dependency files; `configs/`; scripts; actual Git history and hosted repository. Final check: execute documented setup and essential workflow from a clean copy, preserve authentic commits, confirm the required final branch and remote access. A prepared archive alone cannot satisfy the GitHub requirement.
+
+### 3. Inline comments, docstrings and HTML documentation (p. 12)
+
+**Excellent:** highly readable code, comments explaining intent, consistent NumPy/Google/Sphinx-style docstrings with parameters/returns/exceptions/usage, complete organised generated HTML synchronised with source. **Good:** helpful comments and most docstrings with minor detail/consistency/HTML gaps. **Satisfactory:** sporadic/literal comments, incomplete docstrings and partial HTML. **Poor:** absent/misleading comments, missing/incorrect docstrings or absent/broken documentation.
+
+Evidence locations: `src/heat_project/` and `docs/html/`. Final check: spot-check boundary RHS, shortened step, reference truncation and threshold status explanations. Open module links and examples. Regenerate HTML after the last source change.
+
+### 4. Validation and engineering credibility (p. 13)
+
+**Excellent:** appropriate design and metrics, correct outputs, benchmark/physical comparisons, unsupported inputs and failure modes identified, honest limits, and strong engineering judgement. **Good:** appropriate mostly complete validation with an unexplored aspect and acknowledged limitations. **Satisfactory:** superficial metrics/comparisons/limitations and incomplete I/O. **Poor:** missing/incorrect validation, misleading outputs or no comparison/limitations.
+
+Evidence locations: tests/test report; exact references and derivation; benchmark/refinement/reference-convergence/stability tables and figures; report interpretation. Final check: verify boundary values, bounds, symmetry, shortened-step handling and tiny implicit system; separate time/space/reference error; state what evidence influenced selection. Analytical verification does not establish measured real-world accuracy. No experimental accuracy claim may be added.
+
+### 5. Justification of computational approach (p. 14)
+
+**Excellent:** deep reasoning, credible baseline, justified selection, quantitative accuracy/runtime/memory/robustness/scalability as relevant, evidence-supported improvement and thoughtful trade-offs. **Good:** a baseline and solid reasoning with some quantified comparison/improvement and trade-offs. **Satisfactory:** weak baseline/justification, little numerical evidence or speculative improvements. **Poor:** no meaningful baseline, performance analysis or supported conclusions.
+
+Evidence locations: FTCS/BE comparison, loop/vector optimisation, timings/profile, convergence and stability evidence; report method-selection statement. Final check: apply the declared temperature/threshold/physical/refinement criteria, report the actual fastest eligible measured configuration and a separate confirmation case. Stable BE with a large step need not be accurate or faster. Arrays' byte counts are storage estimates rather than process-memory measurements.
+
+### 6. AI use and critical reflection (p. 15)
+
+**Excellent:** fully disclosed, justified and critically checked AI use that is clearly subordinate to the student's own work; student driving the process; understanding and thoughtful reflection with identification of actual errors. **Good:** disclosed/mostly managed use, some checking and adequate reflection/understanding with student responsibility. **Satisfactory:** weak justification/checking, superficial reflection or uncertain ownership. **Poor:** undisclosed/inappropriate reliance, unrecognised errors or lack of understanding/reflection.
+
+Evidence locations: report disclosure; `notes/ai_use_log.md`; decision record; actual student addendum and unaided interview. **Material limit:** AI drafted and implemented a substantial fraction of this project at the user's request. It is not truthful to claim that the student's own work predominated or that the student independently verified/learned the results without evidence. Automated tests and a detailed disclosure support responsible use, but cannot manufacture the student-led-work evidence in the top band. The student must actually review, understand, reproduce and explain the project, then provide a personal reflection.
+
+## Final verification record to consult
+
+`docs/verification_record.md` records completed clean reproduction, numerical agreement and artifact QA. The final update to `docs/submission_status.md` should supply the exact hosted publication commit, final zipped-clone/checksum and content/access checks. Those updates supersede the in-progress publication/packaging statuses above. No claim is made that artifact creation satisfies personal-learning outcomes or performs external student submissions.
+
+## Observed design failure and final evidence
+
+The initial fastest baseline FTCS candidate (`N=20`, `dt=0.01 s`, `r=0.4`) had maximum error **0.993997761 C**, only about **0.006 C** below the 1 C limit. Its first larger-span check reached **1.180372342 C**, which failed the unchanged target. The failure is retained in `results/initial_summary.json` and `results/summary.json.initial_confirmation`.
+
+The openly post hoc design revision adds a **0.8 C development ceiling** without relaxing the original acceptance criteria. The revised selected FTCS setting is `N=20`, `dt=0.00625 s`, `r=0.25`: maximum baseline error **0.588960032 C**, crossing error **0.228987211%**, refinement crossing change **0.171800658%**, median recorded runtime **2.872547571 ms**. Reusing the inspected first case gives **0.699390038 C**, classified as development evidence. A fresh case (`L=0.018 m`, `alpha=1.3e-5 m²/s`, temperatures `90/15/30 C`) gives **0.552150030 C** and **0.213748382%** crossing error without further tuning. This remains mathematical verification rather than independent physical validation. The final report and presentation explain this distinction.
+

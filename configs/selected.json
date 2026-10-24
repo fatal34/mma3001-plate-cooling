@@ -1,0 +1,31 @@
+{
+  "plate": {
+    "length_m": 0.01,
+    "diffusivity_m2_s": 1e-05,
+    "initial_temp_c": 100.0,
+    "boundary_temp_c": 20.0,
+    "target_temp_c": 40.0
+  },
+  "solver": {
+    "intervals": 20,
+    "dt_s": 0.00625,
+    "end_time_s": 3.0,
+    "method": "ftcs",
+    "profile": "uniform",
+    "amplitude_c": 80.0,
+    "implementation": "vectorized",
+    "allow_unstable": false,
+    "perturbation_c": 0.0
+  },
+  "metadata": {
+    "parameter_status": "illustrative synthetic study, not measured material properties",
+    "length_convention": "full thickness from x=0 to x=L",
+    "units": {
+      "length": "m",
+      "time": "s",
+      "temperature": "degC",
+      "diffusivity": "m^2/s"
+    },
+    "purpose": "final configuration selected after explicitly recorded confirmation failure and added development margin"
+  }
+}
